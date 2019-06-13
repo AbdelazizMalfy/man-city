@@ -1,10 +1,19 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+
+
+import Layout from './components/HOC/Layout';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Switch>
+            
+        </Switch>
+      </Layout> 
+    </BrowserRouter>
   );
 }
 
