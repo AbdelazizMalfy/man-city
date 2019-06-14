@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Layout from './components/HOC/Layout';
 import Home from './components/home';
+import './firebase';
 
 function App() {
   return (
