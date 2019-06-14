@@ -1,5 +1,6 @@
 import React from 'react'
 import { Tag } from '../../ui/misc';
+import Blocks from './Blocks';
 
 function MatchesHome() {
     return (
@@ -13,7 +14,7 @@ function MatchesHome() {
                     Matches
                 </Tag>
 
-                BLOCK
+                <Blocks />
 
                 <Tag
                     bck="#ffffff"
