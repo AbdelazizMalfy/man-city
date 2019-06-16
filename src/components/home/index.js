@@ -2,6 +2,7 @@ import React from 'react'
 
 import Featured from './featured';
 import MatchesHome from './matches';
+import MeetPlayers from './meet_players';
 
 
 function Home() {
@@ -9,6 +10,7 @@ function Home() {
         <div className="bck_blue">
              <Featured/>
              <MatchesHome />
+             <MeetPlayers />
         </div>
     )
 }
