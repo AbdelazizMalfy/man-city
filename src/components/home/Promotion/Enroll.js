@@ -118,7 +118,7 @@ class Enroll extends Component {
                                 formdata={this.state.formdata.email}
                                 change={(element) => this.onUpdateForm(element)}
                             />
-                            {this.state.formError ? <div class="error_label">Something is wrong try again</div> : null}
+                            {this.state.formError ? <div className="error_label">Something is wrong try again</div> : null}
                             <div className='success_label'>{this.state. formSuccess}</div>
                             <button onClick={(event) => this.onSubmitForm(event)}>Enroll</button>
                             <div className='enroll_discl'>
