@@ -11,12 +11,15 @@ import SignIn from './components/sign-in';
 
 import Dashboard from './components/admin/Dashboard';
 
+import AdminMatches from './components/admin/matches';
+
 function App(props) {
   return (
     <BrowserRouter>
       <Layout>
         <Switch>
-            <PrivateRoute {...props} path='/dashboard' exact component={Dashboard} />
+            <PrivateRoute {...props} path='/admin_matches' exact component={AdminMatches} />
+            <PrivateRoute {...props} path='/dashboard' exact component={Dashboard} /> 
             <PublicRoute {...props} restricted={true} exact path="/sign_in" component={SignIn} />
             <PublicRoute {...props} restricted={false} exact path="/" component={Home} />
         </Switch>
