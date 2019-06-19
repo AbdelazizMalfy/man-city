@@ -12,12 +12,15 @@ import SignIn from './components/sign-in';
 import Dashboard from './components/admin/Dashboard';
 
 import AdminMatches from './components/admin/matches';
+import AddEditMatches from './components/admin/matches/AddEditMatches';
 
 function App(props) {
   return (
     <BrowserRouter>
       <Layout>
         <Switch>
+            <PrivateRoute  {...props} path="/admin_matches/edit_match/" exact component={AddEditMatches}/>
+            <PrivateRoute {...props} path="/admin_matches/edit_match/:id" exact component={AddEditMatches}/>
             <PrivateRoute {...props} path='/admin_matches' exact component={AdminMatches} />
             <PrivateRoute {...props} path='/dashboard' exact component={Dashboard} /> 
             <PublicRoute {...props} restricted={true} exact path="/sign_in" component={SignIn} />

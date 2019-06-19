@@ -8,8 +8,9 @@ function PrivateRoutes({
     ...rest
 }) {
     return <Route {...rest} component={(props)=>(
-        user ?  <Comp/>  : <Redirect to='sign_in'/>
+        user ?  <Comp {...props} user={user}/>  : <Redirect to='sign_in'/>
     )} />
 }
 
 export default  PrivateRoutes;
+
