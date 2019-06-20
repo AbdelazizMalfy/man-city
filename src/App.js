@@ -14,13 +14,19 @@ import Dashboard from './components/admin/Dashboard';
 import AdminMatches from './components/admin/matches';
 import AddEditMatches from './components/admin/matches/AddEditMatches';
 
+import AdminPlayers from './components/admin/players';
+import AddEditPlayers from './components/admin/players/AddEditPlayers';
+
 function App(props) {
   return (
     <BrowserRouter>
       <Layout>
         <Switch>
+            <PrivateRoute {...props} path='/admin_players' exact component={AdminPlayers  } />
             <PrivateRoute  {...props} path="/admin_matches/edit_match/" exact component={AddEditMatches}/>
             <PrivateRoute {...props} path="/admin_matches/edit_match/:id" exact component={AddEditMatches}/>
+            <PrivateRoute  {...props} path="/admin_players/add_players" exact component={AddEditPlayers}/>
+            <PrivateRoute {...props} path="/admin_players/add_players/:id" exact component={AddEditPlayers}/>
             <PrivateRoute {...props} path='/admin_matches' exact component={AdminMatches} />
             <PrivateRoute {...props} path='/dashboard' exact component={Dashboard} /> 
             <PublicRoute {...props} restricted={true} exact path="/sign_in" component={SignIn} />

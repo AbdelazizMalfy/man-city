@@ -3,6 +3,7 @@ import firebase from "firebase/app";
 import 'firebase/app';
 import 'firebase/database';
 import 'firebase/auth';
+import 'firebase/storage';
 
 
 const firebaseConfig = {
@@ -23,6 +24,7 @@ const firebaseDB = firebase.database()
 const firebaseMatches = firebaseDB.ref('matches')
 const firebaseTeams = firebaseDB.ref('teams')
 const firebasePromotions = firebaseDB.ref('promotions')
+const firebasePlayers = firebaseDB.ref('players')
 
 
 export {
@@ -30,5 +32,6 @@ export {
   firebaseMatches,
   firebasePromotions,
   firebaseTeams,
-  firebaseDB
+  firebaseDB,
+  firebasePlayers
 }
