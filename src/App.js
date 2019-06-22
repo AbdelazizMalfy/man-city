@@ -9,6 +9,7 @@ import Layout from './components/HOC/Layout';
 import Home from './components/home';
 import SignIn from './components/sign-in';
 import TheTeam from './components/theTeam';
+import TheMatches from './components/theMatches';
 
 import Dashboard from './components/admin/Dashboard';
 
@@ -31,6 +32,7 @@ function App(props) {
             <PrivateRoute {...props} path='/admin_matches' exact component={AdminMatches} />
             <PrivateRoute {...props} path='/dashboard' exact component={Dashboard} /> 
             <PublicRoute {...props} restricted={true} exact path="/sign_in" component={SignIn} />
+            <PublicRoute {...props} restricted={false} exact path="/the_matches" component={TheMatches} />
             <PublicRoute {...props} restricted={false} exact path="/the_team" component={TheTeam} />
             <PublicRoute {...props} restricted={false} exact path="/" component={Home} />
         </Switch>
