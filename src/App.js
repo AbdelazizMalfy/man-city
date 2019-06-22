@@ -11,6 +11,8 @@ import SignIn from './components/sign-in';
 import TheTeam from './components/theTeam';
 import TheMatches from './components/theMatches';
 
+import NotFound from './components/ui/NotFound';
+
 import Dashboard from './components/admin/Dashboard';
 
 import AdminMatches from './components/admin/matches';
@@ -35,6 +37,7 @@ function App(props) {
             <PublicRoute {...props} restricted={false} exact path="/the_matches" component={TheMatches} />
             <PublicRoute {...props} restricted={false} exact path="/the_team" component={TheTeam} />
             <PublicRoute {...props} restricted={false} exact path="/" component={Home} />
+            <PublicRoute {...props} restricted={false} exact component={NotFound} />
         </Switch>
       </Layout> 
     </BrowserRouter>
